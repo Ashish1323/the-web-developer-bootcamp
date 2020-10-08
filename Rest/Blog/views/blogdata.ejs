@@ -1,0 +1,12 @@
+<h1><%= blogs.name %></h1>
+<div class="container">
+    <img src="<%= blogs.image %>">
+    <div class="description">
+        <p><%= blogs.body %></p>
+    </div>
+    <div class="Date">
+        <h5><%= blogs.created.toDateString() %></h5>
+        <a href="/blogs/<%= blogs._id %>/edit" > Edit </a>
+        <a href="/blogs/<%= blogs._id %>/delete" > Delete </a>
+    </div>
+</div>

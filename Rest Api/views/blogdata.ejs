@@ -1,0 +1,27 @@
+<h1><%= blogs.name %></h1>
+<div class="container">
+    <img src="<%= blogs.image %>">
+    <div class="description">
+        <p><%= blogs.body %></p>
+    </div>
+    <div class="Date">
+        <h5><%= blogs.created.toDateString() %></h5>
+        <a href="/blogs/<%= blogs._id %>/edit" > Edit </a>
+        <form action="/blog/<%= blogs._id %>?_method=DELETE" method="POST" onclick="ConfirmDelete()">
+            <button>Delete</button>
+            </form>
+    </div>
+</div>
+
+
+<script>
+    function ConfirmDelete()
+{
+  var x = confirm("Are you sure you want to delete?");
+  if (x)
+      return true;
+  else
+    return false;
+}
+
+</script>

@@ -1,0 +1,14 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<%=camper.name%><br>
+<img src="<%= camper.image %>" ><br>
+<%=camper.description%><br>
+<%for(var i=0;i<=camper.comments.length;i++){%>
+<%= camper.comments[i] %><br>
+<%}%>
+<a href="/campgrounds/<%=camper._id%>/comment" class="btn btn-primary btn-large" >Comments</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<%=camper.name%>
+<img src="<%= camper.image %>" >
+<%=camper.description%>
+<p>
+<% camper.comments.forEach(function(seed){ %>
+<strong><%= seed.author %></strong>-<%= seed.comments%><br>
+	
+<%})%>
+</p>
+
+
+<a href="/campgrounds/<%=camper._id%>/comment" class="btn btn-primary btn-large" > Add New Comments</a>
+</body>
+</html>`	

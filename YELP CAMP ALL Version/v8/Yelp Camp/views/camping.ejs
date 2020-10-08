@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> Camping </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    </head>
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <!-- Navbar content -->
+        <a class="navbar-brand" href="#">Yelp Camp
+        </a>
+        
+      </nav>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Camping People</h1>
+    
+            <p>
+                <a href="/newcamp" class="btn btn-primary btn-large">Add New Camp ground</a>
+            </p>
+        </div>
+    </header>
+<div class="row">
+    <% camper.forEach(function(campers){ %>
+        <div class="col -md-3 col -sm-6">
+            <div class="thumbnail">
+                <img src="<%= campers.image %>" >
+                <div class="caption">             
+                    <h3><%= campers.name %></h3>
+                    <a href="/campgrounds/<%= campers._id %>" class="btn btn-primary">desc</a>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+
+  
+
+</div>
+
+<a href="/signup">signup</a>
+<a href="/signin">signin</a>
+<a href="/logout">logout</a>
+</body>
+</html>

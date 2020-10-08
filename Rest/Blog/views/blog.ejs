@@ -1,0 +1,32 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+<div class="ui menu" style="color:black">
+  <div class="header item">
+    <i class="icon code"></i>Blog Site
+  </div>
+  <a class="item">
+    Home
+  </a>
+  <a class="item">
+    New post
+  </a>
+</div>
+<% blogs.forEach(function(blog){ %>
+    <div>
+        <h3><%= blog.name %></h3>
+        <img src="<%= blog.image %>" >
+        <p><%= blog.created %></p>
+        <%= blog.body %>
+        <a href="/blogs/<%= blog._id %>">Read More!!</a>
+    </div>
+
+
+
+<% }); %>
+</body>
+
+</html>

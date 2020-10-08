@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+<%=camper.name%>
+<img src="<%= camper.image %>" >
+<%=camper.description%>
+<p>
+<% camper.comments.forEach(function(seed){ %>
+<strong><%= seed.author.username %></strong>-<%= seed.comments%><br>
+	
+<%})%>
+</p>
+<a href="/signup">signup</a>
+<a href="/signin">signin</a>
+<a href="/logout">logout</a>
+<p>This is made by <%= camper.author.username %></p>
+
+<a href="/campgrounds/<%=camper._id%>/comment" class="btn btn-primary btn-large" > Add New Comments</a>
+</body>
+</html>`	

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>loda te lassan</title>
+</head>
+<body>
+<h1 id="playe1">
+0
+</h1>
+<h1>
+to
+</h1>
+<h1 id="playe2">
+0
+</h1>
+<button id="button1" onclick="">
+Player1
+</button>
+<button id="button2" onclick="">
+Player2
+</button>
+<button id="reset">
+Reset
+</button>
+<script>
+
+var playing1=0;
+var playing2=0;
+var play1=document.getElementById("button1")
+var play2=document.getElementById("button2")
+play1.addEventListener("click",function()
+{
+	
+playing1++;
+document.getElementById("playe1").textContent=playing1;
+} );
+play2.addEventListener("click",function()
+{ 
+
+playing2++;
+document.getElementById("playe2").textContent=playing2;
+}); 
+</script>
+</body>
+</html>
+

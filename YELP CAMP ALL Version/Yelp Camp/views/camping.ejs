@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title> Camping </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    </head>
+<body>
+     <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">YelpCamp</a>
+      </div>
+      <div ">
+        <ul class="nav navbar-nav navbar-right">
+          <% if (!currentUser) { %>
+            <li><a href="/signin">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+          <% } else { %>
+            <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+            <li><a href="/logout">Logout</a></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Camping People</h1>
+    
+            <p>
+                <a href="/newcamp" class="btn btn-primary btn-large">Add New Camp ground</a>
+            </p>
+        </div>
+    </header>
+    <% camper.forEach(function(blog){ %>
+      <div>
+          <h3><%= blog.name %></h3>
+          <img src="<%= blog.image %>" >
+          <p><%= blog.image %></p>
+          <%= blog.description %>
+          <a href="/campgrounds/<%= blog._id %>"> Read More!!</a>
+      </div>
+  
+  
+  
+  <% }); %>
+
+
+  
+
+</div>
+
+</body>
+</html>
